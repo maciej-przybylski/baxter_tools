@@ -26,10 +26,10 @@ catkin_package(
   baxter_maintenance_msgs
 )
 
-install(
-  DIRECTORY scripts/
+catkin_install_python(
+  PROGRAMS scripts/calibrate_arm.py scripts/enable_robot.py scripts/tare.py
+  scripts/update_robot.py scripts/camera_control.py scripts/smoke_test.py scripts/tuck_arms.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-  USE_SOURCE_PERMISSIONS
 )
 
 install(
