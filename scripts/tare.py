@@ -28,6 +28,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 
+from __future__ import print_function
 import argparse
 import os
 import sys
@@ -102,7 +103,7 @@ def main():
     error = None
     try:
         tt.run()
-    except Exception, e:
+    except Exception as e:
         error = e.strerror
     finally:
         try:
